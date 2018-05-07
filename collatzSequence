@@ -1,0 +1,21 @@
+# Program is counting Collatz sequence
+
+def collatz(number):    
+        if number % 2 == 0:
+            return number // 2
+        else:
+            return 3 * number + 1
+        
+while True:
+    try:
+        print('Enter a number: ')
+        number = int(input())
+        break
+    except ValueError:
+        print('Please enter integer number')    
+
+while True:    
+        number = collatz(number)
+        print(str(number))
+        if number == 1:
+            break
