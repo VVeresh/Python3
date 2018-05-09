@@ -1,0 +1,26 @@
+# Write function that convert list values to string format 
+#separated with commas and word `and`
+
+#spam = ['apples', 'bannanas', 'tofu', 'cats']
+#spam = ['apples']
+#spam = []
+
+def commaCode(list):
+    string = ''
+    for i in list:
+        if len(list) < 2:
+            string = i
+            break
+        if i == list[-2]:
+            string += i
+            string += ' and '
+            continue
+        if i == list[-1]:
+            string += i
+            break
+        string += i
+        string += ', '
+        
+    return string
+
+print(commaCode(spam))
